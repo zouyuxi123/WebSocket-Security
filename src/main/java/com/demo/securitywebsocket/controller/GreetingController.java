@@ -12,7 +12,7 @@ import org.springframework.stereotype.Controller;
 import java.security.Principal;
 
 /**
- * @author: 邹玉玺
+ * @author: 邹玉玺修改一下
  * @date: 2020/5/10-14:28
  */
 @Controller
@@ -30,6 +30,6 @@ public class GreetingController {
        System.out.println("当前用户是"+from+"消息发送给"+chat.getTo());
        chat.setFrom(from);//设置chat的from属性
        simpMessagingTemplate.convertAndSendToUser(chat.getTo(),"/queue/chat",chat);
-
+         system.out.println("修改了")
    }
 }
